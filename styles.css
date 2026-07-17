@@ -182,6 +182,7 @@ textarea {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .control-grid {

@@ -53,7 +53,7 @@ const H = canvas.height;
 const photoArea = { x: 0, y: 0, w: W, h: 930 };
 const captionArea = { x: 70, y: 925, w: 940, h: 245 };
 const captionFont = 'Arial, Helvetica, sans-serif';
-const captionWhite = "#f5d548";
+const captionWhite = "#ffffff";
 const logoGreen = "#f5d548";
 
 function draw() {
@@ -310,7 +310,7 @@ function tokenizeSegments(segments) {
 function makeToken(text, highlight, sourceStart, sourceEnd) {
   const lineHeightRange = latestRangeForPosition(state.lineHeightRanges, sourceStart, sourceEnd);
   return {
-    text,
+    text: text.toUpperCase(),
     highlight,
     sourceStart,
     sourceEnd,

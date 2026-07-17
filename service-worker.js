@@ -1,4 +1,4 @@
-const CACHE_NAME = "san-marco-generator-v30";
+const CACHE_NAME = "san-marco-generator-v32";
 const ASSETS = [
   "./",
   "./index.html",
