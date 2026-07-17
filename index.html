@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f5d548">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="San Marco Generator">
+    <title>San Marco Generator</title>
+    <link rel="manifest" href="manifest.webmanifest?v=10">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.svg">
+    <link rel="stylesheet" href="styles.css?v=21">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage" aria-label="Preview">
+        <div class="canvas-wrap">
+          <canvas id="posterCanvas" width="1080" height="1350" aria-label="Generated poster preview"></canvas>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Poster controls">
+        <div class="toolbar">
+          <label class="tool-button">
+            <input id="imageInput" type="file" accept="image/*">
+            <span aria-hidden="true">+</span>
+            Photo 1
+          </label>
+          <label class="tool-button">
+            <input id="imageInput2" type="file" accept="image/*">
+            <span aria-hidden="true">+</span>
+            Photo 2
+          </label>
+          <button id="shareButton" class="tool-button" type="button" disabled>
+            <span aria-hidden="true">↗</span>
+            Share
+          </button>
+          <button id="downloadButton" class="tool-button primary" type="button">
+            <span aria-hidden="true">↓</span>
+            Save
+          </button>
+          <button id="resetButton" class="tool-button" type="button">
+            <span aria-hidden="true">0</span>
+            Reset
+          </button>
+        </div>
+
+        <label class="field">
+          <span>Text</span>
+          <textarea id="captionInput" rows="2" maxlength="240" spellcheck="false">PIZZA NEWS</textarea>
+        </label>
+
+        <div class="control-grid">
+          <label class="slider">
+            <span class="slider-head">
+              <span>Text size</span>
+              <button class="zero-button" type="button" data-reset="textSizeInput">144</button>
+            </span>
+            <input id="textSizeInput" type="range" min="24" max="200" step="1" value="144">
+          </label>
+          <label class="slider">
+            <span class="slider-head">
+              <span>Line spacing</span>
+              <button class="zero-button" type="button" data-reset="lineHeightInput">1.22</button>
+            </span>
+            <input id="lineHeightInput" type="range" min="0.25" max="1.4" step="0.01" value="1.22">
+          </label>
+          <label class="slider">
+            <span class="slider-head">
+              <span>Text up / down</span>
+              <button class="zero-button" type="button" data-reset="textOffsetYInput">0</button>
+            </span>
+            <input id="textOffsetYInput" type="range" min="-130" max="190" step="1" value="0">
+          </label>
+          <label class="slider">
+            <span class="slider-head">
+              <span>Zoom</span>
+              <button class="zero-button" type="button" data-reset="zoomInput">1</button>
+            </span>
+            <input id="zoomInput" type="range" min="1" max="2.4" step="0.01" value="1">
+          </label>
+          <label class="slider">
+            <span class="slider-head">
+              <span>Up / Down</span>
+              <button class="zero-button" type="button" data-reset="offsetYInput">0</button>
+            </span>
+            <input id="offsetYInput" type="range" min="-360" max="260" step="1" value="0">
+          </label>
+          <label class="slider">
+            <span class="slider-head">
+              <span>Left / Right</span>
+              <button class="zero-button" type="button" data-reset="offsetXInput">0</button>
+            </span>
+            <input id="offsetXInput" type="range" min="-260" max="260" step="1" value="0">
+          </label>
+          <label class="field">
+            <span>Photo controls</span>
+            <select id="activeImageInput">
+              <option value="image">Photo 1</option>
+              <option value="image2">Photo 2</option>
+            </select>
+          </label>
+          <label class="slider">
+            <span class="slider-head">
+              <span>Blend location</span>
+              <button class="zero-button" type="button" data-reset="blendLocationInput">50</button>
+            </span>
+            <input id="blendLocationInput" type="range" min="0" max="100" step="1" value="50">
+          </label>
+          <label class="slider">
+            <span class="slider-head">
+              <span>Blend strength</span>
+              <button class="zero-button" type="button" data-reset="blendStrengthInput">100</button>
+            </span>
+            <input id="blendStrengthInput" type="range" min="0" max="100" step="1" value="100">
+          </label>
+          <label class="switch">
+            <input id="monoInput" type="checkbox" checked>
+            <span>Black & white</span>
+          </label>
+          <label class="switch">
+            <input id="markdownInput" type="checkbox" checked>
+            <span>San Marco yellow</span>
+          </label>
+          <label class="switch">
+            <input id="manualLinesInput" type="checkbox" checked>
+            <span>Manual lines</span>
+          </label>
+          <label class="switch">
+            <input id="dualPhotoInput" type="checkbox">
+            <span>Use 2 photos</span>
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js?v=30" defer></script>
+  </body>
+</html>
