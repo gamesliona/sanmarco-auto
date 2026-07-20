@@ -51,7 +51,7 @@ const state = {
 const W = canvas.width;
 const H = canvas.height;
 const photoArea = { x: 0, y: 0, w: W, h: 930 };
-const captionArea = { x: 70, y: 925, w: 940, h: 245 };
+const captionArea = { x: 70, y: 1200, w: 940, h: 80 };
 const captionFont = 'Arial, Helvetica, sans-serif';
 const captionWhite = "#ffffff";
 const logoGreen = "#f5d548";
@@ -556,7 +556,7 @@ function resetSingleControl(controlId) {
   const control = document.querySelector(`#${controlId}`);
   if (!control) return;
   const defaults = {
-    textSizeInput: "144",
+    textSizeInput: "16",
     textOffsetYInput: "0",
     lineHeightInput: "1.22",
     zoomInput: "1",
