@@ -535,6 +535,7 @@ function updateFromControls() {
 }
 
 function resetAdjustments() {
+  textSizeInput.value = "60";
   textOffsetYInput.value = "0";
   lineHeightInput.value = "1.22";
   state.selectedTextRange = null;
@@ -556,7 +557,7 @@ function resetSingleControl(controlId) {
   const control = document.querySelector(`#${controlId}`);
   if (!control) return;
   const defaults = {
-    textSizeInput: "56",
+    textSizeInput: "60",
     textOffsetYInput: "0",
     lineHeightInput: "1.22",
     zoomInput: "1",
@@ -731,7 +732,7 @@ document.querySelectorAll("[data-reset]").forEach((button) => {
 
 if (document.fonts) {
   document.fonts.ready.then(draw);
-  document.fonts.load(`700 48px ${captionFont}`).then(draw);
+  document.fonts.load(`700 60px ${captionFont}`).then(draw);
 }
 
 if (navigator.canShare) shareButton.disabled = false;
