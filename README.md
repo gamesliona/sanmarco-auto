@@ -57,6 +57,6 @@ Open that URL on your phone and use Add to Home Screen.
 - Tap Save to download the PNG.
 - Tap Share on phones that support the Web Share API.
 
-Caption text renders in uppercase and white by default, while Markdown-emphasized text uses San Marco's yellow `#f5d548`. The image fades into the black caption area, matching the social post layout.
+Caption text renders in uppercase and white by default, while Markdown-emphasized text uses the highlight yellow `#ffd101`. The image fades into the black caption area, matching the social post layout.
 
 For home-screen install as a real PWA, GitHub Pages gives you the HTTPS URL Safari and Chrome need.

@@ -55,6 +55,7 @@ const captionArea = { x: 70, y: 925, w: 940, h: 245 };
 const captionFont = 'Arial, Helvetica, sans-serif';
 const captionWhite = "#ffffff";
 const logoGreen = "#f5d548";
+const captionHighlight = "#ffd101";
 
 function draw() {
   ctx.clearRect(0, 0, W, H);
@@ -393,7 +394,7 @@ function drawGreenText(token, x, y) {
   ctx.globalCompositeOperation = "source-over";
   ctx.filter = "none";
   ctx.shadowBlur = 0;
-  ctx.fillStyle = logoGreen;
+  ctx.fillStyle = captionHighlight;
   ctx.fillText(text, x, y);
   ctx.restore();
 }
