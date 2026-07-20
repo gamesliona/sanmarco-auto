@@ -56,15 +56,22 @@ const captionFont = 'Arial, Helvetica, sans-serif';
 const captionWhite = "#ffffff";
 const logoGreen = "#f5d548";
 const captionHighlight = "#ffd101";
+const backgroundImage = new Image();
+backgroundImage.onload = () => draw();
+backgroundImage.src = "assets/postareSAN.png";
 
 function draw() {
   ctx.clearRect(0, 0, W, H);
 
   ctx.fillStyle = "#000";
   ctx.fillRect(0, 0, W, H);
+  if (backgroundImage.complete && backgroundImage.naturalWidth) {
+    ctx.drawImage(backgroundImage, 0, 0, W, H);
+  } else {
+    drawSanMarcoFooter();
+  }
   drawPhotoLayer();
   drawCaption();
-  drawSanMarcoFooter();
 }
 
 function drawPhotoLayer() {

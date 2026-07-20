@@ -1,4 +1,4 @@
-const CACHE_NAME = "san-marco-generator-v33";
+const CACHE_NAME = "san-marco-generator-v34";
 const ASSETS = [
   "./",
   "./index.html",
@@ -7,6 +7,7 @@ const ASSETS = [
   "./manifest.webmanifest",
   "./assets/fonts/GeistMono-Bold.ttf",
   "./assets/fonts/BebasNeue-Regular.ttf",
+  "./assets/postareSAN.png",
   "./icons/icon.svg",
   "./icons/apple-touch-icon.svg",
 ];
