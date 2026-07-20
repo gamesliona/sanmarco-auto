@@ -556,7 +556,7 @@ function resetSingleControl(controlId) {
   const control = document.querySelector(`#${controlId}`);
   if (!control) return;
   const defaults = {
-    textSizeInput: "16",
+    textSizeInput: "56",
     textOffsetYInput: "0",
     lineHeightInput: "1.22",
     zoomInput: "1",
