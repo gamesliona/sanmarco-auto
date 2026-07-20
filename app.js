@@ -52,7 +52,7 @@ const W = canvas.width;
 const H = canvas.height;
 const photoArea = { x: 0, y: 0, w: W, h: 930 };
 const captionArea = { x: 70, y: 1200, w: 940, h: 80 };
-const captionFont = 'Arial, Helvetica, sans-serif';
+const captionFont = '"Barlow Condensed", Arial, Helvetica, sans-serif';
 const captionWhite = "#ffffff";
 const logoGreen = "#f5d548";
 const captionHighlight = "#ffd101";
@@ -407,7 +407,7 @@ function drawGreenText(token, x, y) {
 }
 
 function setCaptionFont(fontSize, italic = false) {
-  ctx.font = `${italic ? "italic " : ""}700 ${fontSize}px ${captionFont}`;
+  ctx.font = `${italic ? "italic " : ""}600 ${fontSize}px ${captionFont}`;
 }
 
 function lineWidth(line) {
